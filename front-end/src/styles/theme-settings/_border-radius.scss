@@ -1,0 +1,21 @@
+:root {
+  --mini-border-radius: 1vh;
+  --extra-small-border-radius: 2vh;
+  --very-small-border-radius: 3vh;
+  --small-border-radius: 4vh;
+  --medium-border-radius: 5vh;
+  --large-border-radius: 6vh;
+  --very-large-border-radius: 8vh;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --mini-border-radius: 2vh;
+    --extra-small-border-radius: 4vh;
+    --very-small-border-radius: 6vh;
+    --small-border-radius: 8vh;
+    --medium-border-radius: 10vh;
+    --large-border-radius: 12vh;
+    --very-large-border-radius: 16vh;
+  }
+}

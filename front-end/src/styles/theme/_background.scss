@@ -1,0 +1,11 @@
+.background-primary-extra-dark {
+  background-color: var(--primary-extra-dark);
+}
+
+.background-white {
+  background-color: var(--white);
+}
+
+.background-gradient-primary {
+  background: linear-gradient(to left, var(--primary), var(--primary-extra-light));
+}

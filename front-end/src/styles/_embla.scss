@@ -1,0 +1,40 @@
+.embla {
+	min-width: 100%;
+	margin: auto;
+	--slide-spacing: 0rem;
+	--slide-size: 30%;
+}
+
+.embla__viewport {
+	overflow: hidden;
+}
+
+.embla__container {
+	display: flex;
+	touch-action: pan-y pinch-zoom;
+	margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+	transform: translate3d(0, 0, 0);
+	flex: 0 0 var(--slide-size);
+	min-width: 0;
+	padding-left: var(--slide-spacing);
+}
+
+.embla__button__svg {
+	width: 35%;
+	height: 35%;
+}
+
+.stroke-embla {
+  transition: .3s;
+}
+
+.stroke-embla-leave {
+  stroke: var(--white);
+}
+
+.stroke-embla-enter {
+  stroke: var(--primary);
+}

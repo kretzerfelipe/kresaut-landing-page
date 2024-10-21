@@ -1,0 +1,36 @@
+:root {
+  --h1-font-size: 6.25rem;
+  --h2-font-size: 4.375rem;
+  --h3-font-size: 3.438rem;
+  --h4-font-size: 2.5rem;
+  --h5-font-size: 1.875rem;
+  --h6-font-size: 1.563rem;
+  --body-font-size: 1.563rem;
+  --mini-font-size: 0.9rem;
+}
+
+@media (max-width: 1535px) {
+  :root {
+    --h1-font-size: 4.375rem;
+    --h2-font-size: 3.125rem;
+    --h3-font-size: 1.781rem;
+    --h4-font-size: 1.75rem;
+    --h5-font-size: 1.313rem;
+    --h6-font-size: 1.094rem;
+    --body-font-size: 1.094rem;
+    --mini-font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.375rem;
+    --h4-font-size: 1rem;
+    --h5-font-size: 0.75rem;
+    --h6-font-size: 0.625rem;
+    --body-font-size: 0.625rem;
+    --mini-font-size:   ;
+  }
+}
