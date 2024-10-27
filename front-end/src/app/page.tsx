@@ -3,10 +3,14 @@ import Header from "@/components/header";
 import Image from "next/image";
 import img from '../assets/img/photographer.png'
 import Screens from "@/assets/svg/main-page/screens";
+import TopBgLights from "@/assets/svg/main-page/bg/top-bg-lights";
 
 export default function Home() {
   return (
     <div className="container small-padding-y" style={{ backgroundColor: 'var(--primary-extra-dark)', alignContent: 'start', rowGap: 'var(--small-spacing)' }}>
+      <div className="container" style={{ position: 'absolute', top: 0 }}>
+				<TopBgLights />
+			</div>
       <Header />
       <div className="container">
         <div className="container" style={{ justifyContent: 'center' }}>
@@ -15,7 +19,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container" style={{ justifyContent: 'center' }}>
-          <div className="container" style={{ position: "relative", width: '60%', aspectRatio: "4.16184971098", alignItems: 'center' }}>
+          <div className="container" style={{ position: "relative", width: '75%', aspectRatio: "4.16184971098", alignItems: 'center' }}>
             <Image src={img} alt={""} fill className='img-cover' />
             <div className="container" style={{ position: 'absolute', left: '2%', width: '35%' }}>
               <p style={{ color: 'var(--white)', fontSize: '1.25vw' }}>
@@ -26,7 +30,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container" style={{ justifyContent: 'center' }}>
-        <div className="container" style={{ width: '60%', gap: 'var(--medium-spacing)' }}>
+        <div className="container" style={{ width: '75%', gap: 'var(--medium-spacing)' }}>
           <div className="container" style={{ width: '50%', alignItems: 'center' }}>
             <Screens />
           </div>
