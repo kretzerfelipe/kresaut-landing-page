@@ -6,7 +6,7 @@ export default function TopBgLights() {
       width="100%"
       height="auto"
       fill="none"
-      viewBox="0 0 1920 1210"
+      viewBox="0 0 1920 1331"
     >
       <g clipPath="url(#clip0_59_2)">
         <g filter="url(#filter0_f_59_2)">
@@ -99,7 +99,7 @@ export default function TopBgLights() {
           ></feGaussianBlur>
         </filter>
         <clipPath id="clip0_59_2">
-          <path fill="#fff" d="M0 0H1920V1210H0z"></path>
+          <path fill="#fff" d="M0 0H1920V1331H0z"></path>
         </clipPath>
       </defs>
     </svg>
