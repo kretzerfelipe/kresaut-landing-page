@@ -7,11 +7,16 @@ import TopBgLights from "@/assets/svg/main-page/bg/top-bg-lights";
 import Footer from "@/components/footer"
 import GlowingCard from "@/components/glowing-card/glowing-card";
 import InteractiveCards from "@/components/glowing-card/animation";
+import { Discover, DiscoverSide } from "@/animations/discover";
+import Photographer from "@/assets/svg/main-page/photographer";
 
 export default function Home() {
   return (
     <div className="container small-padding-y" style={{ backgroundColor: 'var(--primary-extra-dark)' }}>
       <InteractiveCards />
+      <Discover className="discover-text" />
+      <DiscoverSide side="left" className="discover-left" />
+      <DiscoverSide side="right" className="discover-right" />
       <div className="container" style={{ position: 'absolute', top: 0, backgroundColor: 'var(--primary-extra-dark)' }}>
 				<TopBgLights />
 			</div>
@@ -25,7 +30,7 @@ export default function Home() {
           </div>
           <div className="container" style={{ justifyContent: 'center' }}>
             <div className="container" style={{ position: "relative", width: '75%', aspectRatio: "4.16184971098", alignItems: 'center' }}>
-              <Image src={img} alt={""} fill className='img-cover' />
+              <Photographer />
               <div className="container" style={{ position: 'absolute', left: '2%', width: '35%' }}>
                 <p style={{ color: 'var(--white)', fontSize: '1.25vw' }}>
                   Para empreendedores que buscam mais do que um site: nós criamos experiências digitais que refletem a personalidade do seu negócio.
@@ -67,11 +72,11 @@ export default function Home() {
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
                     <div className="container small-padding-y" style={{ justifyContent: 'center', gap: 'var(--extra-small-spacing)' }}>
-    	                <h5 style={{ textAlign: 'center', color: 'var(--white)' }}>
+    	                <h5 className="discover-left" style={{ textAlign: 'center', color: 'var(--white)' }}>
                         Sites personalizados
                       </h5>
                       <div className="container">
-                        <p style={{ textAlign: 'center', color: 'var(--white)' }}>
+                        <p className="discover-right" style={{ textAlign: 'center', color: 'var(--white)' }}>
                           Transforme sua presença online com um site que reflete a essência do seu negócio. Na Kresaut, criamos sites sob medida, responsivos e visualmente marcantes que se destacam na multidão, atraindo clientes e aumentando sua autoridade no mercado.
                         </p>
                       </div>
@@ -85,11 +90,11 @@ export default function Home() {
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
                     <div className="container small-padding-y" style={{ justifyContent: 'center', gap: 'var(--extra-small-spacing)' }}>
-    	                <h5 style={{ textAlign: 'center', color: 'var(--white)' }}>
+    	                <h5 className="discover-right" style={{ textAlign: 'center', color: 'var(--white)' }}>
                         Catálogo online
                       </h5>
                       <div className="container">
-                        <p style={{ textAlign: 'center', color: 'var(--white)' }}>
+                        <p className="discover-left" style={{ textAlign: 'center', color: 'var(--white)' }}>
                           Chega de limitações! Com nosso gerador de catálogo, organize e apresente seus produtos de maneira intuitiva e atraente. Compartilhe seu catálogo em segundos, atualize informações em tempo real e leve seu negócio para qualquer lugar com uma ferramenta rápida e funcional.
                         </p>
                       </div>
@@ -103,11 +108,11 @@ export default function Home() {
                <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
                     <div className="container small-padding-y" style={{ justifyContent: 'center', gap: 'var(--extra-small-spacing)' }}>
-    	                <h5 style={{ textAlign: 'center', color: 'var(--white)' }}>
+    	                <h5 className="discover-right" style={{ textAlign: 'center', color: 'var(--white)' }}>
                         Sistema que solucionam seus problemas
                       </h5>
                       <div className="container">
-                        <p style={{ textAlign: 'center', color: 'var(--white)' }}>
+                        <p className="discover-left" style={{ textAlign: 'center', color: 'var(--white)' }}>
                           A Kresaut vai além da tecnologia: entregamos soluções digitais que realmente fazem a diferença no dia a dia do seu negócio. De sistemas de agendamento a ferramentas de análise, identificamos suas necessidades e criamos sistemas personalizados para resolver problemas e otimizar processos.
                         </p>
                       </div>
