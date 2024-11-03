@@ -1,7 +1,5 @@
 import SloganLogo from "@/assets/svg/slogan-logo";
 import Header from "@/components/header/header";
-import Image from "next/image";
-import img from '../assets/img/photographer.png'
 import Screens from "@/assets/svg/main-page/screens";
 import TopBgLights from "@/assets/svg/main-page/bg/top-bg-lights";
 import Footer from "@/components/footer/footer"
@@ -16,8 +14,7 @@ export default function Home() {
   return (
     <div className="container small-padding-y" style={{ backgroundColor: 'var(--primary-extra-dark)', overflow: 'hidden' }}>
       <InteractiveCards />
-      <Discover className="discover-text" startScroll={85} />
-      <Discover className="discover-footer" />
+      <Discover className="discover-text" />
       <DiscoverSide side="left" className="discover-left" />
       <DiscoverSide side="right" className="discover-right" />
       <StarsAnimation />
@@ -75,7 +72,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container discover-text" style={{ justifyContent: 'center' }}>
+        <div className="container" style={{ justifyContent: 'center' }}>
           <div className="container" style={{ width: '75%', gap: '2%' }}>
             <div className="container">
               <GlowingCard color="#2988cc">
@@ -95,7 +92,7 @@ export default function Home() {
                 </div>
               </GlowingCard>
             </div>
-            <div className="container discover-text">
+            <div className="container">
               <GlowingCard color="#29cccc">
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -113,7 +110,7 @@ export default function Home() {
                 </div>
               </GlowingCard>
             </div>
-            <div className="container discover-text">
+            <div className="container">
               <GlowingCard color="#29cc88">
                <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -133,7 +130,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container discover-footer">
+        <div className="container">
           <Footer />
         </div>
       </div>

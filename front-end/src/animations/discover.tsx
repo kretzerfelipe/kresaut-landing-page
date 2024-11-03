@@ -6,7 +6,7 @@ gsap.registerPlugin(useGSAP);
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function Discover({ y = 50, className, startScroll = 90, startPosition = "top", delay = 0 }: { y?: number; className: string; startScroll?: number; startPosition?: string; delay?: number }) {
+export function Discover({ y = 50, className, startScroll = 95, startPosition = "top", delay = 0 }: { y?: number; className: string; startScroll?: number; startPosition?: string; delay?: number }) {
 	useGSAP(() => {
 		const discoverElements: NodeListOf<HTMLElement> = document.querySelectorAll(`.${className}`);
 
