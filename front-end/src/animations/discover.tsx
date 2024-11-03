@@ -6,7 +6,7 @@ gsap.registerPlugin(useGSAP);
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function Discover({ y = 50, className, startScroll = 95, startPosition = "bottom", delay = 0 }: { y?: number; className: string; startScroll?: number; startPosition?: string; delay?: number }) {
+export function Discover({ y = 50, className, startScroll = 90, startPosition = "top", delay = 0 }: { y?: number; className: string; startScroll?: number; startPosition?: string; delay?: number }) {
 	useGSAP(() => {
 		const discoverElements: NodeListOf<HTMLElement> = document.querySelectorAll(`.${className}`);
 
@@ -36,7 +36,7 @@ export function Discover({ y = 50, className, startScroll = 95, startPosition = 
   )
 }
 
-export function DiscoverSide({ side, className, startScroll = 95, delay = 0 }: { side: "left" | "right"; className: string; startScroll?: number; delay?: number }) {
+export function DiscoverSide({ side, className, startScroll = 0, delay = 0 }: { side: "left" | "right"; className: string; startScroll?: number; delay?: number }) {
 	useGSAP(() => {
     const discoverElements: NodeListOf<HTMLElement> = document.querySelectorAll(`.${className}`);
 
@@ -50,8 +50,8 @@ export function DiscoverSide({ side, className, startScroll = 95, delay = 0 }: {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: element,
-            start: `${startScroll}% 100%`,
-            end: `${startScroll}% 100%`,
+            start: `${startScroll}% 70%`,
+            end: `${startScroll}% 70%`,
             toggleActions: "play none none none",
             invalidateOnRefresh: true,
           },

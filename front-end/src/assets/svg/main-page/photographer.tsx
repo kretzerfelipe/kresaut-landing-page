@@ -1,41 +1,53 @@
-'use client'
+"use client";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 export default function Photographer() {
-
 	useGSAP(() => {
-    const timeline = gsap.timeline({ repeat: -1 });
+		const timeline = gsap.timeline({ repeat: -1 });
 
-    timeline.to('.svg-color-01', {
-      duration: 2,
-      attr: { offset: '-=0.4' },
-			ease: 'none'
-    })
-    .to('.svg-color-02', {
-      duration: 2,
-      attr: { offset: '-=0.4' },
-			ease: 'none'
-    }, "<")
-    .to('.svg-color-03', {
-      duration: 2,
-      attr: { offset: '-=0.4' },
-			ease: 'none'
-    }, "<")
-		.to('.svg-color-04', {
-      duration: 2,
-      attr: { offset: '-=0.4' },
-			ease: 'none'
-    }, "<")
-		.set('.svg-color-01', { attr: { offset: '0.4' } })
-		.set('.svg-color-02', { attr: { offset: '0.6' } }, '<')
-		.set('.svg-color-03', { attr: { offset: '0.8' } }, '<')
-		.set('.svg-color-04', { attr: { offset: '1' } }, '<');
-  }, []);
-	
+		timeline
+			.to(".svg-color-01", {
+				duration: 2,
+				attr: { offset: "-=0.4" },
+				ease: "none",
+			})
+			.to(
+				".svg-color-02",
+				{
+					duration: 2,
+					attr: { offset: "-=0.4" },
+					ease: "none",
+				},
+				"<"
+			)
+			.to(
+				".svg-color-03",
+				{
+					duration: 2,
+					attr: { offset: "-=0.4" },
+					ease: "none",
+				},
+				"<"
+			)
+			.to(
+				".svg-color-04",
+				{
+					duration: 2,
+					attr: { offset: "-=0.4" },
+					ease: "none",
+				},
+				"<"
+			)
+			.set(".svg-color-01", { attr: { offset: "0.4" } })
+			.set(".svg-color-02", { attr: { offset: "0.6" } }, "<")
+			.set(".svg-color-03", { attr: { offset: "0.8" } }, "<")
+			.set(".svg-color-04", { attr: { offset: "1" } }, "<");
+	}, []);
+
 	return (
-		<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='auto' fill='none' viewBox='0 0 1440 346'>
+		<svg xmlns='http://www.w3.org/2000/svg' width='1440' height='346' fill='none' viewBox='0 0 1440 346'>
 			<g clipPath='url(#clip0_52_1495)'>
 				<circle cx='1161' cy='355' r='279' fill='#FAFAFA'></circle>
 			</g>
@@ -49,7 +61,6 @@ export default function Photographer() {
 				<path fill='#011638' d='m1148.18 204.611 24.2-14.3c17.75 12.451 32.53 15.361 33 37.036l-3.27 51.705.19 22.266c.09 9.352-7.47 16.969-16.82 16.969h-34.56c-9.15 0-15.96-8.437-14.03-17.381l6.52-30.297-6.97-59.042 11.74-6.969zM1013.22 174.944a2.24 2.24 0 0 1 2.24-2.236h25.23a2.23 2.23 0 0 1 2.23 2.236v.305l62.22 3.64a1.62 1.62 0 0 1 1.58-1.232h6.61v-4.835c0-1.08.88-1.95 1.95-1.95h1.35v-4.269c0-.68.55-1.233 1.23-1.233h3.77c.68 0 1.23.553 1.23 1.233v4.269h1.24a1.2 1.2 0 0 1-.14-.553c0-.908 1.07-1.652 2.38-1.652 1.32 0 2.38.737 2.38 1.652 0 .235-.07.464-.2.667a1.95 1.95 0 0 1 1.31 1.836v25.068c0 1.08-.88 1.95-1.95 1.95h-12.6a1.95 1.95 0 0 1-1.95-1.95v-3.367h-6.61c-.85 0-1.55-.654-1.62-1.487l-62.28 11.467a2.23 2.23 0 0 1-2.13 1.569h-25.23a2.237 2.237 0 0 1-2.24-2.236c-.3-10.228.37-19.941 0-28.892'></path>
 				<path fill='#FFB6B6' d='M1110.64 190.686c-3.15-7.166-1.84-14.618 2.91-16.644 4.75-2.02 11.15 2.147 14.29 9.319a18.84 18.84 0 0 1 1.66 9.097l12.92 30.544-15.05 5.838-11.14-30.728a19.06 19.06 0 0 1-5.59-7.426'></path>
 				<path fill='#011638' d='M1202.26 204.662c8 7.731 7.34 20.748-1.4 27.628l-42.83 33.688c-4.68 3.679-11.53 2.281-14.4-2.935-10.94-18.181-11.82-15.71-18.09-34.285l16.87-10.635 10.43 13.995 22.81-26.274c6.89-7.941 19.04-8.475 26.6-1.176h.01zM1172.61 182.256l-4.36 3.125s-1.29-13.626-3.06-14.23c-1.77-.603-4.16 2.535-4.16 2.535l-1.75 5.114-5.77-2.408s-6.69-3.602-9.05-4.408-2.01-7.655-2.01-7.655-28.36 3.881-24.1-12.464c0 0 1.47-12.026 4.61-9.638 3.13 2.389 3.18-3.532 3.18-3.532l7.11-1.531s9.77-13.15 29.03-1.963 10.32 47.042 10.32 47.042v.013z'></path>
-				<path fill='#011638' fillRule='evenodd' d='M1194.86 124.585c.06-1.724-2.07-2.573-3.22-1.285l-5.22 5.853-7.83-.239c-1.73-.053-2.58 2.077-1.29 3.225l5.85 5.217-.24 7.837c-.05 1.724 2.08 2.573 3.23 1.286l5.22-5.853 7.83.239c1.73.052 2.58-2.078 1.29-3.226l-5.85-5.217zM1203.03 147.758c.6-.601.11-1.613-.73-1.532l-3.81.366-2.73-2.688c-.6-.592-1.61-.11-1.53.73l.36 3.814-2.69 2.731c-.59.601-.11 1.613.73 1.533l3.82-.367 2.73 2.689c.6.591 1.61.109 1.53-.73l-.36-3.815z' clipRule='evenodd'></path>
 			</g>
 			<path fill='url(#paint0_linear_52_1495)' d='m1012.42 172.384.58 33.246L0 346V0z'></path>
 			<defs>
@@ -59,12 +70,12 @@ export default function Photographer() {
 				<clipPath id='clip1_52_1495'>
 					<path fill='#fff' d='M865.928 108.962h431.819V346H865.928z'></path>
 				</clipPath>
-					<linearGradient id='paint0_linear_52_1495' x1='-2026' x2='3039' y1='173' y2='173' gradientUnits='userSpaceOnUse'>
-						<stop className="svg-color-01" offset={'0.4'} stopColor='#011638' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
-						<stop className="svg-color-02" offset={'0.6'} stopColor='#0A6EB5' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
-						<stop className="svg-color-03" offset={'0.8'} stopColor='#011638' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
-						<stop className="svg-color-04" offset={'1'} stopColor='#0A6EB5' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
-					</linearGradient>
+				<linearGradient id='paint0_linear_52_1495' x1='-2026' x2='3039' y1='173' y2='173' gradientUnits='userSpaceOnUse'>
+					<stop className="svg-color-01" offset={'0.4'} stopColor='#011638' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
+					<stop className="svg-color-02" offset={'0.6'} stopColor='#0A6EB5' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
+					<stop className="svg-color-03" offset={'0.8'} stopColor='#011638' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
+					<stop className="svg-color-04" offset={'1'} stopColor='#0A6EB5' stopOpacity='0.2' style={{ transition: '1s' }}></stop>
+				</linearGradient>
 			</defs>
 		</svg>
 	);
