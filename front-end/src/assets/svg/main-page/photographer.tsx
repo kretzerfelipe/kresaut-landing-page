@@ -47,7 +47,7 @@ export default function Photographer() {
 	}, []);
 
 	return (
-		<svg xmlns='http://www.w3.org/2000/svg' width='1440' height='346' fill='none' viewBox='0 0 1440 346'>
+		<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='auto' fill='none' viewBox='0 0 1440 346'>
 			<g clipPath='url(#clip0_52_1495)'>
 				<circle cx='1161' cy='355' r='279' fill='#FAFAFA'></circle>
 			</g>

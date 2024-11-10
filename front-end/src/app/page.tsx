@@ -23,14 +23,14 @@ export default function Home() {
 			</div>
       <div className="container" style={{ alignContent: 'start', rowGap: 'var(--large-spacing)', position: 'relative' }}>
         <Header />
-        <div className="container">
+        <div className="container sobre">
           <div className="container" style={{ justifyContent: 'center' }}>
             <div className="container" style={{ width: '20%' }}>
               <SloganLogo />
             </div>
           </div>
           <div className="container" style={{ justifyContent: 'center' }}>
-            <div className="container" style={{ position: "relative", width: '75%', aspectRatio: "4.16184971098", alignItems: 'center' }}>
+            <div className="container" style={{ position: "relative", width: '75%', alignItems: 'center' }}>
               <Photographer />
               <div className="container star-01" style={{ position: 'absolute', width: '1.5vw', right: '16.5%', top: '35%', rotate: '22deg' }}>
                 <Star />
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container" style={{ justifyContent: 'center' }}>
+        <div className="container servicos" style={{ justifyContent: 'center' }}>
           <div className="container" style={{ width: '75%', gap: '2%' }}>
             <div className="container">
               <GlowingCard color="#2988cc">
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container contato">
           <Footer />
         </div>
       </div>

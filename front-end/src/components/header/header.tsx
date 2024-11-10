@@ -1,6 +1,14 @@
 import GlowingCard from "../glowing-card/glowing-card";
 
 export default function Header() {
+
+	function scrollToElement(className: string   ) {
+		const element = document.querySelector(`.${className}`);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	}
+
 	return (
 		<div className='container' style={{ justifyContent: "center" }}>
 			<div className='container' style={{ gap: "2%", width: "35%" }}>
