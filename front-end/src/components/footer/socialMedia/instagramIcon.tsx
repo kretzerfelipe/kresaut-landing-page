@@ -8,7 +8,7 @@ export default function InstagramIcon() {
 
 	return (
 		<div className='container fill' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} style={{ cursor: "pointer" }}>
-			<a href='https://wa.link/vqekdq' target='_blank'>
+			<a href='https://www.instagram.com/sautech.com.br/' target='_blank'>
 				<Instagram isHover={isHover} />
 			</a>
 		</div>

@@ -1,6 +1,5 @@
 import SloganLogo from "@/assets/svg/slogan-logo";
 import Header from "@/components/header/header";
-import Screens from "@/assets/svg/main-page/screens";
 import TopBgLights from "@/assets/svg/main-page/bg/top-bg-lights";
 import Footer from "@/components/footer/footer"
 import GlowingCard from "@/components/glowing-card/glowing-card";
@@ -9,21 +8,23 @@ import { Discover, DiscoverSide } from "@/animations/discover";
 import Photographer from "@/assets/svg/main-page/photographer";
 import Star from "@/assets/svg/star";
 import StarsAnimation from "@/animations/home/starsAnimation";
+import NewsForm from "@/components/news-form";
 
 export default function Home() {
   return (
     <div className="container small-padding-y" style={{ backgroundColor: 'var(--primary-extra-dark)', overflow: 'hidden' }}>
-      <InteractiveCards />
+      <Discover className="discover-bottom" startPosition="bottom" startScroll={100} />
       <Discover className="discover-text" />
       <DiscoverSide side="left" className="discover-left" />
       <DiscoverSide side="right" className="discover-right" />
+      <InteractiveCards />
       <StarsAnimation />
       <div className="container" style={{ position: 'absolute', top: 0, backgroundColor: 'var(--primary-extra-dark)' }}>
 				<TopBgLights />
 			</div>
       <div className="container" style={{ alignContent: 'start', rowGap: 'var(--large-spacing)', position: 'relative' }}>
         <Header />
-        <div className="container sobre">
+        <div className="container sobre-menu">
           <div className="container" style={{ justifyContent: 'center' }}>
             <div className="container" style={{ width: '20%' }}>
               <SloganLogo />
@@ -46,35 +47,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container discover-text" style={{ justifyContent: 'center', position: 'relative' }}>
-          <div className="container" style={{ width: '75%', gap: 'var(--medium-spacing)' }}>
-            <div className="container discover-left" style={{ width: '50%', alignItems: 'center' }}>
-              <Screens />
-            </div>
-            <div className="container discover-right fill very-small-border-radius" style={{ border: '2px solid var(--primary-extra-dark)', background: 'linear-gradient(-45deg, #0A6EB530, #01163830)', justifyContent: 'center', alignContent: 'center' }}>
-              <div className="container" style={{ width: '90%', gap: 'var(--extra-small-spacing)' }}>
-                <div className="container">
-                  <p style={{ textAlign: 'center', color: 'var(--white)' }}>
-                    Pronto para levar seu negócio ao próximo nível? A 
-                    <strong style={{ color: 'var(--white)' }}> Kresaut </strong>
-                    cria sites que combinam design único com a
-                    <strong style={{ color: 'var(--white)' }}> a funcionalidade perfeita</strong>
-                    .
-                  </p>
-                </div>
-                <div className="container">
-                  <p style={{ textAlign: 'center', color: 'var(--white)' }}>
-                    <strong style={{ color: 'var(--white)' }}>Não fique para trás na era digital. </strong>
-                    Deixe-nos digitalizar o seu negócio com inovação e estilo.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container servicos" style={{ justifyContent: 'center' }}>
+        <div className="container servicos-menu" style={{ justifyContent: 'center' }}>
           <div className="container" style={{ width: '75%', gap: '2%' }}>
-            <div className="container">
+            <div className="container fill">
               <GlowingCard color="#2988cc">
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -92,7 +67,7 @@ export default function Home() {
                 </div>
               </GlowingCard>
             </div>
-            <div className="container">
+            <div className="container fill">
               <GlowingCard color="#29cccc">
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -110,7 +85,7 @@ export default function Home() {
                 </div>
               </GlowingCard>
             </div>
-            <div className="container">
+            <div className="container fill">
               <GlowingCard color="#29cc88">
                <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -130,7 +105,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container contato">
+        <div className="container contatos-menu">
+          <NewsForm />
+        </div>
+        <div className="container">
           <Footer />
         </div>
       </div>
