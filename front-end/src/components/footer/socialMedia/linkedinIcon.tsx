@@ -1,7 +1,6 @@
 "use client";
 
 import Linkedin from "@/assets/svg/social-media/linkedin";
-import WhatsApp from "@/assets/svg/social-media/whatsapp";
 import { useState } from "react";
 
 export default function LinkedinIcon() {

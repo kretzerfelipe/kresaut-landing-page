@@ -1,4 +1,3 @@
-import { relative } from "path";
 import { ReactNode } from "react";
 
 interface GlowingCardProps {
