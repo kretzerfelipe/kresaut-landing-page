@@ -205,6 +205,13 @@ input[type="radio"]:checked {
   flex-grow: 1;
 }
 
+.fill-mobile-fix {
+  @media (max-width: 900px) {
+    flex-basis: auto;
+    flex-grow: auto;
+  }
+}
+
 .img-contain {
   width: 100%;
   height: auto;
@@ -215,4 +222,24 @@ input[type="radio"]:checked {
   min-width: 100%;
   min-height: auto;
   object-fit: cover;
+}
+
+.w75 {
+  width: 75%;
+  @media (max-width: 900px) {
+    width: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+}
+
+.w35 {
+  width: 35%;
+  @media (max-width: 900px) {
+    width: 50%;
+  }
+  @media (max-width: 600px) {
+    width: 65%;
+  }
 }

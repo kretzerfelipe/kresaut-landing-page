@@ -31,7 +31,7 @@ export default function Home() {
             </div>
           </div>
           <div className="container" style={{ justifyContent: 'center' }}>
-            <div className="container" style={{ position: "relative", width: '75%', alignItems: 'center' }}>
+            <div className="container w75" style={{ position: "relative", alignItems: 'center' }}>
               <Photographer />
               <div className="container star-01" style={{ position: 'absolute', width: '1.5vw', right: '16.5%', top: '35%', rotate: '22deg' }}>
                 <Star />
@@ -48,8 +48,8 @@ export default function Home() {
           </div>
         </div>
         <div className="container servicos-menu" style={{ justifyContent: 'center' }}>
-          <div className="container" style={{ width: '75%', gap: '2%' }}>
-            <div className="container fill">
+          <div className="container w75" style={{ gap: '2%' }}>
+            <div className="container fill fill-mobile-fix">
               <GlowingCard color="#2988cc">
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -67,7 +67,7 @@ export default function Home() {
                 </div>
               </GlowingCard>
             </div>
-            <div className="container fill">
+            <div className="container fill fill-mobile-fix">
               <GlowingCard color="#29cccc">
                 <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>
@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
               </GlowingCard>
             </div>
-            <div className="container fill">
+            <div className="container fill fill-mobile-fix">
               <GlowingCard color="#29cc88">
                <div className="container" style={{ justifyContent: 'center' }}>
                   <div className="container" style={{ width: '90%' }}>

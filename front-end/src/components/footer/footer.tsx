@@ -7,7 +7,7 @@ import Logo from '@/assets/svg/logo';
 export default function Footer() {
   return (
     <div className="container" style={{ justifyContent: 'center' }}>
-      <div className="container" style={{ gap: '2%', width: '75%' }}>
+      <div className="container w75" style={{ gap: '2%' }}>
         <div className="container">
           <GlowingCard color="#2988cc">
             <div className="container" style={{ justifyContent: 'center' }}>

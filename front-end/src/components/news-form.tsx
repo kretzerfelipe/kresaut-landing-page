@@ -66,7 +66,7 @@ export default function NewsForm() {
 
   return (
     <div className='container' style={{ justifyContent: "center", alignItems: "center" }}>
-      <div className='container large-padding-y small-border-radius form-container' style={{ width: "75%", justifyContent: "center", backgroundColor: 'var(--card)' }}>
+      <div className='container large-padding-y small-border-radius form-container w75' style={{ justifyContent: "center", backgroundColor: 'var(--card)' }}>
         <div className='container' style={{ width: "90%", gap: "var(--extra-small-spacing )" }}>
           <div className='container'>
             <div className='container' style={{ gap: "var(--mini-spacing )", alignContent: `start` }}>

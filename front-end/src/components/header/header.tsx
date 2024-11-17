@@ -14,7 +14,7 @@ export default function Header() {
 
 	return (
 		<div className='container' style={{ justifyContent: "center" }}>
-			<div className='container' style={{ gap: "2%", width: "35%" }}>
+			<div className='container w35' style={{ gap: "2%" }}>
 				<div className='container'>
 					<GlowingCard color='#2988cc'>
 						<div className='container extra-small-padding-y primary-extra-dark-border' style={{ justifyContent: "space-around", boxShadow: "0 0 60px 10px #fafafa40", borderRadius: '20px' }}>
