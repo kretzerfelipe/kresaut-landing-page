@@ -90,6 +90,34 @@ input[type="text"]:focus {
   outline: none;
 }
 
+input[type="number"] {
+  width: 100%;
+  border: 2px solid var(--primary);
+  padding-left: var(--extra-small-spacing);
+  padding-right: var(--extra-small-spacing);
+  padding-top: var(--mini-spacing);
+  padding-bottom: var(--mini-spacing);
+  font-family: var(--primary-font-family), sans-serif;
+  font-size: var(--body-font-size);
+  border-radius: var(--mini-border-radius);
+  background-color: var(--primary-extra-dark);
+  color: var(--white);
+  -moz-appearance: textfield;
+  -webkit-appearance: none; 
+  appearance: none;
+}
+
+input[type="number"]:focus {
+  width: 100%;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input[type="password"] {
   width: 100%;
   border: 2px solid var(--primary);
@@ -240,6 +268,27 @@ input[type="radio"]:checked {
     width: 50%;
   }
   @media (max-width: 600px) {
-    width: 65%;
+    width: 70%;
+  }
+}
+
+.photographer {
+  display: flex;
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.photographer-mobile {
+  display: none;
+  @media (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.slogan-logo {
+  width: 25%;
+  @media (max-width: 900px) {
+    width: 40%;
   }
 }

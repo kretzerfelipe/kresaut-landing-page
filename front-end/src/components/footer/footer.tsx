@@ -12,22 +12,22 @@ export default function Footer() {
           <GlowingCard color="#2988cc">
             <div className="container" style={{ justifyContent: 'center' }}>
               <div className="container extra-small-padding-y primary-extra-dark-border" style={{ justifyContent: 'center', boxShadow: '0 0 60px 10px #fafafa40', borderRadius: '18px' }}>
-                <div className="container" style={{ justifyContent: 'center', width: '90%', gap: '5%' }}>
-                  <div className="container" style={{ width: '25%', gap: 'var(--extra-small-spacing)', justifyContent: 'center' }}>
-                    <div className="container discover-bottom">
+                <div className="container discover-bottom" style={{ justifyContent: 'center', width: '90%', gap: '5%' }}>
+                  <div className="container slogan-logo" style={{ gap: 'var(--extra-small-spacing)', justifyContent: 'center' }}>
+                    <div className="container">
                       <Logo color={'var(--white)'} />
                     </div>
-                    <div className="container discover-bottom" style={{ width: '80%', gap: '5%' }}>
+                    <div className="container" style={{ width: '80%', gap: '5%' }}>
                       <InstagramIcon />
                       <WhatsAppIcon />
                       <LinkedinIcon />
                     </div>
                   </div>
                   <div className="container" style={{ gap: 'var(--mini-spacing)' }}>
-                    <div className="container discover-bottom" style={{ justifyContent: 'center' }}>
+                    <div className="container" style={{ justifyContent: 'center' }}>
                       <p style={{ color: 'var(--white)', fontSize: 'var(--mini-font-size)' }}>Email: kresaut.contato@gmail.com</p>
                     </div>
-                    <div className="container discover-bottom" style={{ justifyContent: 'center' }}>
+                    <div className="container" style={{ justifyContent: 'center' }}>
                       <p style={{ color: 'var(--white)', fontSize: 'var(--mini-font-size)' }}>Telefone: (47)98959-2850</p>
                     </div>
                   </div>

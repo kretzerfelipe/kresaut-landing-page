@@ -9,11 +9,12 @@ import Photographer from "@/assets/svg/main-page/photographer";
 import Star from "@/assets/svg/star";
 import StarsAnimation from "@/animations/home/starsAnimation";
 import NewsForm from "@/components/news-form";
+import PhotographerMobile from "@/assets/svg/main-page/photographer-mobile";
 
 export default function Home() {
   return (
     <div className="container small-padding-y" style={{ backgroundColor: 'var(--primary-extra-dark)', overflow: 'hidden' }}>
-      <Discover className="discover-bottom" startPosition="bottom" startScroll={100} />
+      <Discover className="discover-bottom" startPosition="top" startScroll={100} />
       <Discover className="discover-text" />
       <DiscoverSide side="left" className="discover-left" />
       <DiscoverSide side="right" className="discover-right" />
@@ -26,11 +27,11 @@ export default function Home() {
         <Header />
         <div className="container sobre-menu">
           <div className="container" style={{ justifyContent: 'center' }}>
-            <div className="container" style={{ width: '20%' }}>
+            <div className="container slogan-logo">
               <SloganLogo />
             </div>
           </div>
-          <div className="container" style={{ justifyContent: 'center' }}>
+          <div className="container photographer" style={{ justifyContent: 'center' }}>
             <div className="container w75" style={{ position: "relative", alignItems: 'center' }}>
               <Photographer />
               <div className="container star-01" style={{ position: 'absolute', width: '1.5vw', right: '16.5%', top: '35%', rotate: '22deg' }}>
@@ -46,9 +47,25 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="container photographer-mobile" style={{ justifyContent: 'center' }}>
+            <div className="container" style={{ position: "relative", alignItems: 'center' }}>
+              <PhotographerMobile />
+              <div className="container star-01" style={{ position: 'absolute', width: '3.5vw', right: '2.5%', top: '35%', rotate: '22deg' }}>
+                <Star />
+              </div>
+              <div className="container star-02" style={{ position: 'absolute', width: '1.75vw', right: '2.3%', top: '42.5%', rotate: '-22deg' }}>
+                <Star />
+              </div>
+              <div className="container" style={{ position: 'absolute', left: '2.5%', width: '50%' }}>
+                <p style={{ color: 'var(--white)', fontSize: '2.75vw' }}>
+                  Para empreendedores que buscam mais do que um site: nós criamos experiências digitais que refletem a personalidade do seu negócio.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="container servicos-menu" style={{ justifyContent: 'center' }}>
-          <div className="container w75" style={{ gap: '2%' }}>
+          <div className="container w75" style={{ columnGap: '2%', rowGap: 'var(--large-spacing)' }}>
             <div className="container fill fill-mobile-fix">
               <GlowingCard color="#2988cc">
                 <div className="container" style={{ justifyContent: 'center' }}>

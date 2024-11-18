@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   try {
-    const { nome, email } = await request.json()
+    const { nome, email, numero } = await request.json()
 
-    const existingUser = await prisma.user.findFirst({
+    let existingUser = await prisma.user.findFirst({
       where: { email },
     })
 
@@ -13,10 +13,19 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Email já cadastrado' }, { status: 409 })
     }
 
+    existingUser = await prisma.user.findFirst({
+      where: { celular: numero },
+    })
+
+    if (existingUser) {
+      return NextResponse.json({ error: 'Número já cadastrado' }, { status: 409 })
+    }
+
     const newUser = await prisma.user.create({
       data: {
         nome,
         email,
+        celular: numero
       },
     })
 

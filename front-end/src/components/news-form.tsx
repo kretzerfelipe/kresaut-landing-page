@@ -1,11 +1,14 @@
 "use client";
+import { stringify } from "querystring";
 import { useState } from "react";
 
 export default function NewsForm() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
+  const [numero, setNumero] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailExists, setEmailExists] = useState(false);
+  const [numeroExists, setNumeroExists] = useState(false);
   const [nameIsntValid, setNameIsntValid] = useState(false);
   const [emailIsntValid, setEmailIsntValid] = useState(false);
   const [emailAndNameValid, setEmailAndNameValid] = useState(false);
@@ -16,6 +19,7 @@ export default function NewsForm() {
       setNameIsntValid(true);
       setEmailIsntValid(false);
       setEmailExists(false);
+      setNumeroExists(false)
       return;
     } else {
       setNameIsntValid(false);
@@ -25,6 +29,7 @@ export default function NewsForm() {
       setEmailIsntValid(true);
       setNameIsntValid(false);
       setEmailExists(false);
+      setNumeroExists(false)
       return;
     } else {
       setEmailIsntValid(false);
@@ -40,6 +45,7 @@ export default function NewsForm() {
         body: JSON.stringify({
           nome: user,
           email: email,
+          numero: numero
         }),
       });
       const data = await response.json();
@@ -48,14 +54,21 @@ export default function NewsForm() {
           setEmailExists(true);
           setEmailIsntValid(false);
           setNameIsntValid(false);
+          setNumeroExists(false)
+        } else if (data.error === "Número já cadastrado") {
+          setEmailExists(false);
+          setEmailIsntValid(false);
+          setNameIsntValid(false);
+          setNumeroExists(true)
         } else {
           setEmailExists(false);
         }
       } else {
         setEmailAndNameValid(true)
-          setEmailExists(false);
-          setEmailIsntValid(false);
-          setNameIsntValid(false);
+        setEmailExists(false);
+        setEmailIsntValid(false);
+        setNameIsntValid(false);
+        setNumeroExists(false)
       }
     } catch (error) {
       console.error("Erro ao cadastrar o usuário:", error);
@@ -66,7 +79,7 @@ export default function NewsForm() {
 
   return (
     <div className='container' style={{ justifyContent: "center", alignItems: "center" }}>
-      <div className='container large-padding-y small-border-radius form-container w75' style={{ justifyContent: "center", backgroundColor: 'var(--card)' }}>
+      <div className='container form-container w75 large-padding-y' style={{ justifyContent: "center", backgroundColor: 'var(--card)', borderRadius: '20px' }}>
         <div className='container' style={{ width: "90%", gap: "var(--extra-small-spacing )" }}>
           <div className='container'>
             <div className='container' style={{ gap: "var(--mini-spacing )", alignContent: `start` }}>
@@ -99,6 +112,15 @@ export default function NewsForm() {
             </div>
             <div className="container" style={{ display: emailExists ? 'flex' : 'none' }}>
               <p className="mini" style={{ color: '#b50b0b' }}>O email já foi cadastrado</p>
+            </div>
+          </div>
+          <div className='container discover-text' style={{ gap: "var(--mini-spacing )" }}>
+            <label htmlFor='numero'>
+              <p style={{ color: 'var(--white)' }}>Insira seu número</p>
+            </label>
+            <input type='number' name='número' placeholder='Número' value={numero} onChange={(e) => setNumero(`${e.target.value}`)} />
+            <div className="container" style={{ display: numeroExists ? 'flex' : 'none' }}>
+              <p className="mini" style={{ color: '#b50b0b' }}>O número já foi cadastrado</p>
             </div>
           </div>
           <div className='container discover-text'>

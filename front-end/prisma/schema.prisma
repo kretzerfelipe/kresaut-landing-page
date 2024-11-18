@@ -12,7 +12,8 @@ datasource db {
 }
 
 model User {
-  uuid String @id @default(uuid())
-  nome           String
-  email          String
+  uuid    String @id @default(uuid())
+  nome    String
+  email   String
+  celular String
 }
