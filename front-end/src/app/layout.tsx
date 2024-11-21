@@ -12,7 +12,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaTrackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+
   console.log('GA Tracking ID:', process.env.NEXT_PUBLIC_GA_TRACKING_ID);
+
 
   return (
     <html lang="en">
